@@ -19,25 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div
-          style={{
-            height: "100px",
-            background: "red",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
+        <div style={{ height: "100px", background: "red" }}>
           <div style={{ display: "flex", gap: "1rem" }}>
+            <Link href="/">Home</Link>
             <Link href="/Portfolio">Portfolio</Link>
-            <Link href="/Home">Home</Link>
-            <Link href="/Home/Coins">Coins</Link>
-
-            <Link href="/Home/Coins/Compare">Compare</Link>
-            <Link href="/Home/Convertor">Convertor</Link>
           </div>
-          <Navbar />
         </div>
-
         {children}
       </body>
     </html>
