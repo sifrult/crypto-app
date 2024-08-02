@@ -5,10 +5,10 @@ import Link from "next/link";
 export default function Navbar() {
   const [coins, setCoins] = useState(["123", "abc"]);
   const [value, setValue] = useState("");
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setValue(e.target.value);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setCoins([...coins, value]);
     setValue("");
