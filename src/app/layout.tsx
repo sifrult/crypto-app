@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ThemeToggle from "../app/components/ThemeToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div style={{ height: "100px", background: "red" }}>
-          <div style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/">Home</Link>
-            <Link href="/Portfolio">Portfolio</Link>
-          </div>
+      <body className={`${inter.className} py-3 dark:bg-dark dark:text-white`}>
+        <div style={{ display: "flex", gap: "1rem" }} className=" dark:bg-dark dark:text-white">
+          <Link href="/">Home</Link>
+          <Link href="/Portfolio">Portfolio</Link>
+          <ThemeToggle />
         </div>
         {children}
       </body>
